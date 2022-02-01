@@ -37,6 +37,9 @@ dependencies {
     implementation(project(Deps.Project.kotlinDataStore))
     implementation(Square.moshi)
     implementation(Square.Moshi.kotlinReflect)
+    testImplementation(Testing.junit4)
+    androidTestImplementation(AndroidX.test.ext.junit)
+    androidTestImplementation(AndroidX.test.espresso.core)
 }
 
 afterEvaluate {

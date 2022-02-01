@@ -35,6 +35,9 @@ android {
 
 dependencies {
     api(AndroidX.DataStore.preferences)
+    testImplementation(Testing.junit4)
+    androidTestImplementation(AndroidX.test.ext.junit)
+    androidTestImplementation(AndroidX.test.espresso.core)
 }
 
 afterEvaluate {
