@@ -16,7 +16,7 @@ abstract class KotlinDataStoreModel<V>(
     corruptionHandler: ReplaceFileCorruptionHandler<Preferences>? = null,
     produceMigrations: (Context) -> List<DataMigration<Preferences>> = { listOf() }
 ) {
-    val name: String = name.ifBlank { javaClass.simpleName }
+    private val name: String = name.ifBlank { javaClass.simpleName }
 
     private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(
         this.name,
