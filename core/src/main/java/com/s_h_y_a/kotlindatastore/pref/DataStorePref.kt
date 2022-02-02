@@ -9,7 +9,6 @@ import com.s_h_y_a.kotlindatastore.DataStorePrefDataConverterWrapper
 import com.s_h_y_a.kotlindatastore.KotlinDataStoreModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.last
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlin.properties.ReadWriteProperty
@@ -83,7 +82,7 @@ class DataStorePref<T, R, V> internal constructor(
 
     override fun getValue(thisRef: KotlinDataStoreModel<V>, property: KProperty<*>): T = runBlocking {
         try {
-            dataStoreFlow.last()
+            dataStoreFlow.first()
         } catch (e: NoSuchElementException) {
             Log.e("KotlinDataStore", "Because of NoSuchElementException, returned default value.")
             defaultValue
