@@ -22,7 +22,6 @@ import com.chargemap.compose.numberpicker.NumberPicker
 import com.s_h_y_a.kotlindatastore.compose.collectAsMutableState
 import com.s_h_y_a.kotlindatastoresample.R
 import com.s_h_y_a.kotlindatastoresample.datastore.AccountPref
-import com.s_h_y_a.kotlindatastoresample.datastore.MyDataStore
 import com.s_h_y_a.kotlindatastoresample.model.Sex
 
 @Composable
@@ -93,7 +92,7 @@ fun NameTextField() {
 @Composable
 fun SexSelector() {
     var expanded by remember { mutableStateOf(false) }
-    var selected by MyDataStore.sex.collectAsMutableState()
+    var selected by AccountPref.sex.collectAsMutableState()
     val context = LocalContext.current
 
     Row(verticalAlignment = Alignment.CenterVertically) {
