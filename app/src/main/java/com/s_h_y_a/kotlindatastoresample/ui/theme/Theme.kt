@@ -1,5 +1,6 @@
 package com.example.compose
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.*
@@ -64,6 +65,7 @@ private val DarkThemeColors = darkColorScheme(
     inverseSurface = md_theme_dark_inverseSurface,
 )
 
+@SuppressLint("NewApi")
 @Composable
 fun KotlinDataStoreTheme(
 	useDarkTheme: Boolean = isSystemInDarkTheme(),
