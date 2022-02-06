@@ -70,7 +70,7 @@ object AccountPref :
 
 ## Initialize KotlinDataStore
 
-use initalizer module (`com.github.User.Repo:Module`) or initialize on App.class
+use initalizer module or initialize on App.class
 
 ```kotlin:App.kt
 //App.kt
