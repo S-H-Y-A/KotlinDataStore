@@ -7,7 +7,7 @@ import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 
 @Composable
-fun <T, R, V> DataStoreFlow<T,R,V>.collectAsMutableState(context: CoroutineContext = EmptyCoroutineContext, scope: CoroutineScope = rememberCoroutineScope()): MutableState<T> {
+fun <T, R, V> DataStoreFlow<T,R,V>.collectAsMutableState(defaultValue: T = this.defaultValue, context: CoroutineContext = EmptyCoroutineContext, scope: CoroutineScope = rememberCoroutineScope()): MutableState<T> {
     val state by collectAsState(defaultValue, context)
     return DataStoreState(scope, this, state)
 }

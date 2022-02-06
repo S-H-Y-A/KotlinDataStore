@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">KotlinDataStore</string>
+    <string name="app_bar">FakeEditAccountActivity</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="back">Tap to back</string>
+    <string name="saved">Saved!!</string>
+    <string name="press_to_save">Need to press the save icon to save.</string>
+    <string name="save">save</string>
 </resources>
